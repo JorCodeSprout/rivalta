@@ -1,0 +1,54 @@
+.table-wrapper {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Reparte el espacio de forma uniforme entre columnas */
+}
+
+.tabla th, 
+.tabla td {
+  padding: 14px 8px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center; /* Centra absolutamente todo por defecto */
+  white-space: nowrap;
+}
+
+.tabla th {
+  background-color: var(--bg-card-hover);
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center; /* Asegura que la cabecera esté centrada */
+}
+
+/* Columna de la posición (#) */
+.tabla th:first-child,
+.tabla td.pos {
+  width: 45px;
+  font-weight: bold;
+  color: var(--primary-neon);
+  text-align: center;
+}
+
+/* Columna del jugador: ahora también centrada */
+.tabla th:nth-child(2),
+.tabla td.nombre-col {
+  text-align: center; /* Nombre del jugador centrado debajo de su cabecera */
+  width: 30%;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Estilo para la fila del primer puesto (campeón provisional) */
+.tabla tr:first-child td {
+  background-color: rgba(245, 158, 11, 0.08);
+}

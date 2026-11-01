@@ -1,0 +1,158 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-container {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 24px;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.legal-container {
+    max-width: 600px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.legal-content {
+    overflow-y: auto;
+    margin: 16px 0;
+    padding-right: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 12px;
+}
+
+.modal-header h2,
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.form-checkbox input {
+    margin-top: 2px;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 600;
+}
+
+.btn-submit {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+    opacity: 0.85;
+}
+
+.btn-submit:disabled {
+    background: #888888;
+}
+
+.auth-error-box {
+    background: #ffeeee;
+    border: 1px solid #ff0000;
+    color: #cc0000;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+.modal-switch-mode {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.link-switch {
+    background: none;
+    border: none;
+    color: #555555;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.link-switch:hover {
+    color: #000000;
+}

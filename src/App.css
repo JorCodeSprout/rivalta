@@ -1,0 +1,198 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  background-color: var(--bg-card);
+  padding: 4px;
+  border-radius: var(--radius-md, 10px);
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  background-color: var(--primary);
+  color: var(--bg-main);
+  box-shadow: none;
+}
+
+.btn-reset {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: transparent;
+  color: var(--danger, #ef4444);
+  border: 1px solid var(--danger, #ef4444);
+  border-radius: var(--radius-sm, 6px);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  align-self: flex-start;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-reset:hover {
+  background-color: var(--danger, #ef4444);
+  color: #ffffff;
+}
+
+.footer-autor {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+  letter-spacing: 0.5px;
+}
+
+.footer-autor a {
+  color: var(--text-main);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footer-autor a:hover {
+  opacity: 0.7;
+  text-shadow: none;
+}
+
+.btn-theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm, 6px);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-theme-toggle:hover {
+  background-color: var(--bg-card-hover, #1f2335);
+  border-color: var(--border-focus, #52525b);
+  transform: translateY(-1px);
+}
+
+.theme-icon {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+}
+
+.auth-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-badge {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.auth-buttons-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-primary-sm {
+  padding: 8px 14px;
+  background-color: var(--primary);
+  color: var(--bg-main);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm, 6px);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary-sm:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary-sm {
+  padding: 8px 14px;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm, 6px);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary-sm:hover {
+  background-color: var(--bg-card);
+  border-color: var(--text-muted);
+}

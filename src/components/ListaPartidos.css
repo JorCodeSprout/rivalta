@@ -1,0 +1,106 @@
+.partidos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.partido-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md, 10px);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.partido-card:hover {
+    border-color: var(--border-focus, var(--text-muted));
+    background-color: var(--bg-card-hover);
+}
+
+/* Si el partido ya tiene resultado, muestra un borde izquierdo sólido limpio */
+.partido-card.jugado {
+    border-left: 4px solid var(--text-main);
+}
+
+.jugador-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.jugador-info.derecha {
+    justify-content: flex-end;
+}
+
+.jugador-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    letter-spacing: -0.01em;
+}
+
+.score-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px;
+}
+
+.input-score {
+    width: 46px;
+    height: 42px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm, 6px);
+    color: var(--text-main);
+    transition: border-color 0.2s ease;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+.input-score:focus {
+    outline: none;
+    border-color: var(--border-focus, var(--text-main));
+    box-shadow: none;
+}
+
+.input-score::-webkit-outer-spin-button,
+.input-score::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.vs-badge {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 4px 6px;
+    border-radius: var(--radius-sm, 6px);
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 639px) {
+    .partido-card {
+        padding: 12px;
+    }
+    .score-box {
+        padding: 0 6px;
+        gap: 6px;
+    }
+    .input-score {
+        width: 40px;
+        height: 38px;
+        font-size: 1rem;
+    }
+}
