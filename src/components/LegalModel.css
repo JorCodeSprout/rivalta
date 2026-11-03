@@ -1,0 +1,89 @@
+/* Contenedor específico legal */
+.legal-container {
+    max-width: 500px;
+    width: 90%;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 16px;
+    padding: 30px;
+    color: var(--text-main, #0f172a);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Área de contenido desplazable o limpia */
+.legal-content {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.legal-content h4 {
+    font-size: 1rem;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: var(--text-main);
+}
+
+.legal-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted, #64748b);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* Formularios dentro del modal */
+.legal-form {
+    display: flex;
+    flex-direction: column; /* Corregido de flexDirection a flex-direction */
+    gap: 12px;
+}
+
+.legal-form-intro {
+    font-size: 0.85rem;
+    color: var(--text-muted, #64748b);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Mensaje de éxito */
+.legal-success-message {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.legal-success-message h4 {
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.legal-success-message p {
+    color: var(--text-muted, #64748b);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Botón unificado principal (Corregido color de texto a blanco nítido) */
+.legal-btn-primary {
+    width: 100%;
+    padding: 10px 16px;
+    background-color: var(--primary, #2563eb);
+    color: #ffffff !important; /* Forzado a blanco para visibilidad perfecta */
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.legal-btn-primary:hover {
+    background-color: var(--primary-hover, #1d4ed8);
+}
+
+.legal-modal-footer {
+    border-top: none;
+    padding-top: 10px;
+}

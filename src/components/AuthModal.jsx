@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { supabase } from '../supabaseClient';
-import LegalModal from './LegalModal';
+import LegalModal from './LegalModel';
 import './AuthModal.css';
 
 export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialIsRegister = false }) {

@@ -110,33 +110,33 @@
 
 .btn-theme-toggle {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 90px; /* Sube o baja este valor si lo quieres más arriba o más abajo */
+  right: 24px;  /* Lo pasa a la zona derecha */
   z-index: 100;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm, 6px);
-  font-size: 0.8rem;
-  font-weight: 500;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--text-main);
+  color: var(--bg-main);
+  border: 2px solid var(--border-color);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-theme-toggle:hover {
-  background-color: var(--bg-card-hover, #1f2335);
-  border-color: var(--border-focus, #52525b);
-  transform: translateY(-1px);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  opacity: 0.95;
 }
 
 .theme-icon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   stroke: currentColor;
 }
 
@@ -195,4 +195,218 @@
 .btn-secondary-sm:hover {
   background-color: var(--bg-card);
   border-color: var(--text-muted);
+}
+
+/* --- ESTILOS DE LA PANTALLA DE BIENVENIDA LLAMATIVA --- */
+.welcome-banner-modern {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 50px 24px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(var(--primary-rgb, 99, 102, 241), 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  margin: 30px 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.welcome-banner-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  animation: shine 6s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.welcome-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(var(--primary-rgb, 99, 102, 241), 0.15);
+  color: var(--primary, #6366f1);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(var(--primary-rgb, 99, 102, 241), 0.3);
+}
+
+.welcome-title {
+  color: var(--text-main);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  background: linear-gradient(to right, var(--text-main), var(--primary, #6366f1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-description {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto 30px auto;
+}
+
+.welcome-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  max-width: 600px;
+  margin: 0 auto 35px auto;
+  text-align: left;
+}
+
+.welcome-feature-card {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.welcome-feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary, #6366f1);
+}
+
+.welcome-feature-card h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 4px 0;
+}
+
+.welcome-feature-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.welcome-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-welcome-primary {
+  padding: 12px 28px;
+  background-color: var(--primary, #6366f1);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-welcome-primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+
+.btn-welcome-secondary {
+  padding: 12px 28px;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-welcome-secondary:hover {
+  background-color: var(--bg-card);
+  border-color: var(--text-main);
+  transform: translateY(-2px);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.modal-container {
+  background: var(--bg-card, #1e1e1e);
+  border: 1px solid var(--border-color, #333);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 550px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  color: var(--text-main, #fff);
+  text-align: left;
+  position: relative;
+}
+
+
+/* --- CORRECCIÓN DEFINITIVA DE BOTONES PARA MODO CLARO Y OSCURO --- */
+
+/* 1. Botones Principales (Acciones de guardado, envío, registro, etc.) */
+.btn-primary-sm, 
+.btn-welcome-primary,
+.legal-btn-primary {
+    background-color: var(--primary);
+    color: var(--bg-main) !important; /* Invierte inteligentemente el texto según el fondo (--primary) */
+    border: 1px solid var(--border-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary-sm:hover, 
+.btn-welcome-primary:hover,
+.legal-btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* 2. Botones Secundarios (Acceder, Planes, Canjear, etc.) */
+.btn-secondary-sm, 
+.btn-welcome-secondary {
+    background-color: var(--bg-card);
+    color: var(--text-main) !important; 
+    border: 1px solid var(--border-color);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-sm:hover, 
+.btn-welcome-secondary:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-focus);
+}
+
+/* 3. Enlaces y botones del Footer y texto general */
+.footer-autor a,
+.footer-btn {
+    color: var(--text-main);
 }
